@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<app-top-landing [pageName]="currentPage" [woodBanner]="topLandingBanner"></app-top-landing>
+<div class="container" style="padding-bottom: 100px;">
+    <div class="row mt-5">
+        <div class="col-6 mx-auto">
+            <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label class="form-label text-light" for="firstname">First name</label>
+                    <input class="form-control" id="firstname" type="text" formControlName="firstName" aria-describedby="firstNameErrorMsg"/>
+                    <label id="firstNameErrorMsg" class="text-danger" for="firstname" *ngIf="contactUsForm.controls.firstName.invalid && contactUsForm.controls.firstName.touched">First name is required.</label>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-light" for="lastname" >Last name</label>
+                    <input class="form-control" id="lastname" type="text" formControlName="lastName" aria-describedby="lastNameErrorMsg"/>
+                    <label id="lastNameErrorMsg" class="text-danger" for="lastname" *ngIf="contactUsForm.controls.lastName.invalid && contactUsForm.controls.lastName.touched">Last name is required.</label>
+                </div>
+                <div class="mb-3">
+                    <label class="text-light" for="email">Email address</label>
+                    <input class="form-control" id="email" type="text" formControlName="email"/>
+                    <div *ngIf="contactUsForm.controls.email.invalid && contactUsForm.controls.email.touched && contactUsForm.controls.email.errors">
+                        <label for="email" class="text-danger" *ngIf="contactUsForm.controls.email.errors?.['required']">Email is required.</label>
+                        <label for="email" class="text-danger" *ngIf="contactUsForm.controls.email.errors?.['email']">Invalid email address.</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="text-light" for="msg">Message</label>
+                    <textarea class="form-control" id="msg"  formControlName="msg" rows="3" cols="50"></textarea>
+                    <div *ngIf="contactUsForm.controls.msg.invalid && contactUsForm.controls.msg.touched && contactUsForm.controls.msg.errors">
+                        <label for="msg" class="text-danger" *ngIf="contactUsForm.controls.msg.errors?.['required']">Message is required.</label>
+                        <label for="msg" class="text-danger" *ngIf="contactUsForm.controls.msg.errors?.['minlength']">Not enough characters.</label>
+                    </div>
+                </div>
+                <button class="btn btn-dark" type="submit" [disabled]="!contactUsForm.valid">Submit</button>
+                <div class="mb-5">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

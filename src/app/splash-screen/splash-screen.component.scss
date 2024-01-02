@@ -1,0 +1,81 @@
+.splashScreen {
+    background: url('../../assets/img/sitebackground.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    //transition: left 0.5s;
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+    animation-delay: 3s;
+    
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+.fadeOut {
+    @include keyframes(fade) {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 0;
+        }
+    };
+
+    @include animate(fade, 3s, linear, 1);
+}
+
+.appLabel {
+    margin-top: 32px;
+    color: #fff;
+    font-size: 2.5em;
+    font-family: "Pacifico", cursive;
+}
+
+.splashInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 600px;
+}
+
+.appLogo {
+    background: url("../../assets/img/ccw_ring_logo.png");
+    background-repeat: no-repeat;
+    max-width: 250px;
+    max-height: 250px;
+    background-position: center;
+    background-size: contain;
+    width: 256px;
+    height: 256px;
+}
+
+.appLoader {
+    background: url("../../assets/img/tail-spin.svg");
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+    margin-top: 12px;
+}

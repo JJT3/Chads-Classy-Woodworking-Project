@@ -1,0 +1,10 @@
+@mixin woodbanner{
+    background-image: "../../assets/img/woodbanner1.jpg";
+    height: 10vh;
+}
+
+.banner{
+    background: linear-gradient(to right, var(--topGradientBlack), var(--topGradientBlack), var(--backgroundPrimaryColor));
+    height: 10vh;
+    object-position: top 100%;
+}

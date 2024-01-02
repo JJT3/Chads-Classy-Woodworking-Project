@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --topGradientBlack: rgb(16, 16, 16);
+    --backgroundPrimaryColor: rgb(32, 32, 32);
+    --backgroundSecondaryColor: rgb(0, 0, 0);
+    --bottomGradientBlack: rgb(16, 16, 16);
+}
+
+.businessHeader{
+    background-color: var(--backgroundSecondaryColor);
+}
+
+.backgroundClass{
+    background-image: url("assets/img/sitebackground.png");
+}
+
+@font-face {
+    font-family: "Old London";
+    src: local("Old London") url("assets/fonts/OldLondon.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title{
+    font-family: "Old London";
+    text-shadow: 3px 3px 3px black;
+}
+
+.title2{
+    font-family: "Old London";
+    color: black;
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+}
+
+.navButton{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 3px black;
+}
+
+.textShadowed{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+.topLandingTitle{
+    font-family: "Old London";
+    text-shadow: 3px 3px 3px black;
+}
+
+.footerStyle {
+    //background-image: url('assets/img/woodgrain2.png'); 
+    background-color: var(--backgroundSecondaryColor);
+    background-repeat: no-repeat; 
+    //background-size: 100% 100%; 
+    position: fixed;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+}
+
+.homeBackground{
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    height: 100vh;
+    width: 50vw;
+}

@@ -1,0 +1,57 @@
+
+<app-navbar></app-navbar>
+<!--<app-top-landing [pageName]="currentPage" [woodBanner]="topLandingBanner"></app-top-landing>-->
+<div class="bg-image" style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/img/carousel_1.png');
+    height: 100vh; 
+    width: auto; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover">
+    <div class="container-fluid">
+        <div class="d-flex flow-row">
+            <div class="d-flex flex-column mx-auto text-center">
+                <div class="d-flex justify-content-center homeBackground">
+                    <section class="text-light text-shadowed">
+                        <!--LOGO, NAME, SLOGAN-->
+                        <section>
+                            <img class="mb-2" src="../../assets/img/ccw_ring_logo.png" height="100%" width="100%" style="max-height: 200px; max-width: 200px;">
+                            <h1 class="title">{{businessName}}</h1>
+                            <h4 class="mt-1 mb-5">"<i>{{businessSlogan}}</i>"</h4>
+                            <br>
+                        </section>
+                        <!--SERVICES-->
+                        <section>
+                            <br>
+                            <hr class="mx-auto" style="color: white; width: 50%;">
+                            <br>
+                            <h4>Our Services</h4>
+                            <br>
+                            <h5 class="">Custom Works <strong>|</strong> Repairs <strong>|</strong> Fine Furniture <strong>|</strong> Paneling</h5>
+                            <br>
+                            <button type="button" class="btn btn-outline-secondary"><a class="nav-link text-light" href="/about">Learn More</a></button>
+                            <br>
+                        </section>
+                        <!--WHY CHOOSE US-->
+                        <section>
+                            <br>
+                            <hr class="mx-auto" style="color: white; width: 75%;">
+                            <h4>Why choose us?</h4>
+                            <br>
+                            <div class="d-flex d-column">
+                                <p style="margin-left: 64px; margin-right: 64px;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat nulla mauris, a porta elit lacinia in.
+                                    Integer non vulputate arcu. Nullam tincidunt purus nec ipsum porttitor pretium. 
+                                    Ut ullamcorper tortor rhoncus, venenatis libero eget, tristique turpis. 
+                                    Integer nunc ligula, consectetur at ipsum interdum, molestie aliquet sem. Sed quis efficitur leo. 
+                                </p>
+                            </div>
+                            <hr class="mx-auto" style="color: white; width: 50%;">
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
